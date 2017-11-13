@@ -35,5 +35,7 @@ public class Main
 		System.out.println("sing005: ");
 		MySingleton sing005 = MySingleton.Instance();
 		sing005.sum();
+		
+		MathController mc = new MathController();
 	}
 }

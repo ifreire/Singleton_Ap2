@@ -41,6 +41,6 @@ public class Main
 		sing005.sum();
 		
 		
-		MathController mc = new MathController();
+		//MathController mc = new MathController();
 	}
 }

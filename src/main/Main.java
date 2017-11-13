@@ -26,6 +26,8 @@ public class Main
 		sing001.div();
 		
 		System.out.print((8 + 8 + 9 + 8.5 + 9 + 10 + 9.5 + 9)/8);
+		System.out.print((8 + 8 + 9 + 8.5 + 9 + 10 + 9.5 + 9)/8);
+		
 		
 		
 //		IMySingletonFAC sing001 = MySingletonFAC.Instance();

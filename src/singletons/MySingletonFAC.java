@@ -1,19 +1,27 @@
 package singletons;
 
-public class MySingleton
+public class MySingletonFAC implements IMySingletonFAC
 {
-	private static MySingleton instance;
+	private static IMySingletonFAC instance;
 	private MathController mathController;
 	
-	public static MySingleton Instance()
+	public static IMySingletonFAC Instance()
 	{
 		if (instance == null)
-			instance = new MySingleton();
+			instance = new MySingletonFAC();
 		
 		return instance;
 	}
 	
-	private MySingleton()
+	public static IMySingletonFAC Instance(int x, int y)
+	{
+		if (instance == null)
+			instance = new MySingletonFAC();
+		
+		return instance;
+	}
+	
+	private MySingletonFAC()
 	{
 		this.mathController = new MathController();
 	}

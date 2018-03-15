@@ -31,6 +31,7 @@ public class Main
 		System.out.println("sing002: ");
 		sing002.sub();
 		sing002.setXY(100, 3);
+		sing002.sub();
 		System.out.println("");
 		System.out.println("");
 		
@@ -46,6 +47,7 @@ public class Main
 		System.out.println("sing004: ");
 		sing004.div();
 		sing004.setXY(20, 30);
+		sing004.div();
 		System.out.println("");
 		System.out.println("");
 		

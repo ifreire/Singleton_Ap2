@@ -1,29 +1,36 @@
-package singletons;
+package singletons.controllers;
 
-public class MySingletonFAC implements IMySingletonFAC
+import singletons.interfaces.IControllersFAC;
+
+public class ControllersFAC implements IControllersFAC
 {
-	private static IMySingletonFAC instance;
+	private static IControllersFAC instance;
 	private MathController mathController;
 	
-	public static IMySingletonFAC Instance()
+	public static IControllersFAC Instance()
 	{
 		if (instance == null)
-			instance = new MySingletonFAC();
+			instance = new ControllersFAC();
 		
 		return instance;
 	}
 	
-	public static IMySingletonFAC Instance(int x, int y)
+	public static IControllersFAC Instance(int x, int y)
 	{
 		if (instance == null)
-			instance = new MySingletonFAC();
+			instance = new ControllersFAC(x, y);
 		
 		return instance;
 	}
 	
-	private MySingletonFAC()
+	private ControllersFAC()
 	{
 		this.mathController = new MathController();
+	}
+	
+	private ControllersFAC(int x, int y)
+	{
+		this.mathController = new MathController(x, y);
 	}
 	
 	public void setXY(float x, float y)

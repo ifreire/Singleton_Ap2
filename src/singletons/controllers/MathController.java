@@ -1,4 +1,4 @@
-package singletons;
+package singletons.controllers;
 
 class MathController
 {
@@ -8,6 +8,12 @@ class MathController
 	{
 		this.x = 5;
 		this.y = 2;
+	}
+	
+	MathController(int x, int y)
+	{
+		this.x = x;
+		this.y = y;
 	}
 	
 	void setXY(float x, float y)
@@ -27,6 +33,7 @@ class MathController
 	{
 		System.out.println(this.x - this.y);
 	}
+	
 	void mult()
 	{
 		System.out.println(this.x * this.y);

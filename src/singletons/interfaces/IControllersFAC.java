@@ -1,6 +1,6 @@
-package singletons;
+package singletons.interfaces;
 
-public interface IMySingletonFAC
+public interface IControllersFAC
 {
 	void setXY(float x, float y);
 	void sum();

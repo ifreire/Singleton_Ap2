@@ -1,24 +1,25 @@
 package main;
 
-import singletons.*;
+import singletons.controllers.ControllersFAC;
+import singletons.interfaces.IControllersFAC;
 
 public class Main
 {
 	public static void main(String[] args)
 	{
-		MySingletonFAC.Instance().sum();
-		MySingletonFAC.Instance().sub();
-		MySingletonFAC.Instance().mult();
-		MySingletonFAC.Instance().div();
+		ControllersFAC.Instance().sum();
+		ControllersFAC.Instance().sub();
+		ControllersFAC.Instance().mult();
+		ControllersFAC.Instance().div();
 		
-		MySingletonFAC.Instance().setXY(10, 5);
+		ControllersFAC.Instance().setXY(10, 5);
 		
-		MySingletonFAC.Instance().sum();
-		MySingletonFAC.Instance().sub();
-		MySingletonFAC.Instance().mult();
-		MySingletonFAC.Instance().div();
+		ControllersFAC.Instance().sum();
+		ControllersFAC.Instance().sub();
+		ControllersFAC.Instance().mult();
+		ControllersFAC.Instance().div();
 		
-		IMySingletonFAC sing001 = MySingletonFAC.Instance();
+		IControllersFAC sing001 = ControllersFAC.Instance();
 		
 		sing001.sum();
 		sing001.sub();
@@ -26,34 +27,33 @@ public class Main
 		sing001.div();
 		
 		
-		IMySingletonFAC sing002 = MySingletonFAC.Instance();
+		IControllersFAC sing002 = ControllersFAC.Instance();
 		System.out.println("sing002: ");
 		sing002.sub();
 		sing002.setXY(100, 3);
+		sing002.sub();
 		System.out.println("");
 		System.out.println("");
 		
 		
-		IMySingletonFAC sing003 = MySingletonFAC.Instance();
+		IControllersFAC sing003 = ControllersFAC.Instance();
 		System.out.println("sing003: ");
 		sing003.mult();
 		System.out.println("");
 		System.out.println("");
 		
 		
-		IMySingletonFAC sing004 = MySingletonFAC.Instance();
+		IControllersFAC sing004 = ControllersFAC.Instance();
 		System.out.println("sing004: ");
 		sing004.div();
 		sing004.setXY(20, 30);
+		sing004.div();
 		System.out.println("");
 		System.out.println("");
 		
 		
-		IMySingletonFAC sing005 = MySingletonFAC.Instance();
+		IControllersFAC sing005 = ControllersFAC.Instance();
 		System.out.println("sing005: ");
 		sing005.sum();
-		
-		
-		//MathController mc = new MathController();
 	}
 }
